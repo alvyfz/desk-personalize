@@ -1,7 +1,5 @@
-// @ts-expect-error -- CSS import for global styles
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
-import { Link } from "@heroui/link";
 import clsx from "clsx";
 
 import { Providers } from "./providers";
