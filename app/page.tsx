@@ -1,55 +1,26 @@
-import { Link } from "@heroui/link";
-import { Snippet } from "@heroui/snippet";
-import { Code } from "@heroui/code";
-import { button as buttonStyles } from "@heroui/theme";
+import { Configurator } from "@/components/configurator/Configurator";
+import { ProductData } from "@/types/product";
+import { promises as fs } from "fs";
+import path from "path";
 
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
+async function getData() {
+  const filePath = path.join(process.cwd(), "public", "product-list.json");
+  const fileContents = await fs.readFile(filePath, "utf8");
+  return JSON.parse(fileContents) as ProductData;
+}
 
-export default function Home() {
+export default async function Home() {
+  const data = await getData();
+
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <div className="inline-block max-w-xl text-center justify-center">
-        <span className={title()}>Make&nbsp;</span>
-        <span className={title({ color: "violet" })}>beautiful&nbsp;</span>
-        <br />
-        <span className={title()}>
-          websites regardless of your design experience.
-        </span>
-        <div className={subtitle({ class: "mt-4" })}>
-          Beautiful, fast and modern React UI library.
-        </div>
-      </div>
+    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 w-full max-w-7xl mx-auto px-4">
+      <div className="w-full h-full text-center">
+        <h1 className="text-4xl font-bold mb-4">Design Your Workspace</h1>
+        <p className="text-lg text-default-500 mb-8">
+          Create your perfect setup with our interactive configurator.
+        </p>
 
-      <div className="flex gap-3">
-        <Link
-          isExternal
-          className={buttonStyles({
-            color: "primary",
-            radius: "full",
-            variant: "shadow",
-          })}
-          href={siteConfig.links.docs}
-        >
-          Documentation
-        </Link>
-        <Link
-          isExternal
-          className={buttonStyles({ variant: "bordered", radius: "full" })}
-          href={siteConfig.links.github}
-        >
-          <GithubIcon size={20} />
-          GitHub
-        </Link>
-      </div>
-
-      <div className="mt-8">
-        <Snippet hideCopyButton hideSymbol variant="bordered">
-          <span>
-            Get started by editing <Code color="primary">app/page.tsx</Code>
-          </span>
-        </Snippet>
+        <Configurator data={data} />
       </div>
     </section>
   );

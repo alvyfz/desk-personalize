@@ -1,0 +1,90 @@
+{
+  "desks": [
+    {
+      "id": "desk-wood-01",
+      "name": "Oak Wood Standing Desk",
+      "price": 15,
+      "thumbnailUrl": [
+        "/assets/desk-wood-01.png",
+        "/assets/desk-wood-01-2.png"
+      ],
+      "canvasUrl": "/assets/desk-wood-01-canvas.png",
+      "zIndex": 10
+    },
+    {
+      "id": "desk-glass-02",
+      "name": "Modern Glass Desk",
+      "price": 13,
+      "thumbnailUrl": ["/assets/desk-glass-02.png"],
+      "canvasUrl": "/assets/desk-glass-02-canvas.png",
+      "zIndex": 10
+    }
+  ],
+  "chairs": [
+    {
+      "id": "chair-ergonomic-01",
+      "name": "ErgoPro Office Chair",
+      "price": 10,
+      "thumbnailUrl": ["/assets/chair-ergonomic-01.png"],
+      "canvasUrl": "/assets/chair-ergonomic-01-canvas.png",
+      "zIndex": 20
+    },
+    {
+      "id": "chair-ergonomic-02",
+      "name": "ErgoPro Office Chair Anya",
+      "price": 8,
+      "thumbnailUrl": ["/assets/chair-ergonomic-02.png"],
+      "canvasUrl": "/assets/chair-ergonomic-02-canvas.png",
+      "zIndex": 20
+    }
+  ],
+  "monitors": [
+    {
+      "id": "acc-monitor-01",
+      "name": "UltraWide 34-inch Curve",
+      "price": 20,
+      "thumbnailUrl": ["/assets/monitor-30.png"],
+      "canvasUrl": "/assets/monitor-30-canvas.png",
+      "zIndex": 15,
+      "maxCount": 1
+    },
+    {
+      "id": "acc-monitor-02",
+      "name": "Monitor 24-inch",
+      "price": 30,
+      "thumbnailUrl": ["/assets/monitor-24.png"],
+      "canvasUrl": "/assets/monitor-24-canvas.png",
+      "zIndex": 15,
+      "maxCount": 3
+    }
+  ],
+  "accessories": [
+    {
+      "id": "acc-keyboard-01",
+      "name": "Apple Magic Keyboard",
+      "type": "keyboard",
+      "price": 15,
+      "thumbnailUrl": ["/assets/accessories-keyboard-apple-magic-keyboard.png"],
+      "canvasUrl": "/assets/accessories-keyboard-apple-magic-keyboard-canvas.png",
+      "zIndex": 20
+    },
+    {
+      "id": "acc-mouse-01",
+      "name": "Logitech MX3 Mouse",
+      "type": "mouse",
+      "price": 10,
+      "thumbnailUrl": ["/assets/accessories-mouse-logitech-mx3.png"],
+      "canvasUrl": "/assets/accessories-mouse-logitech-mx3-canvas.png",
+      "zIndex": 20
+    },
+    {
+      "id": "acc-lamp-01",
+      "name": "Smart Lamp",
+      "type": "other",
+      "price": 20,
+      "thumbnailUrl": ["/assets/accessories-smart-lamp.png"],
+      "canvasUrl": "/assets/accessories-smart-lamp-canvas.png",
+      "zIndex": 20
+    }
+  ]
+}
